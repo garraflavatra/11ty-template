@@ -1,0 +1,2 @@
+Tell GitHub Pages not to treat the output as a Jekyll site (and thus not to
+remove files and folders starting with an underscore).
