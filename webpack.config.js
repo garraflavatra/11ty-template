@@ -6,9 +6,9 @@ const WebpackAssetsManifest = require("webpack-assets-manifest");
 module.exports = {
   entry: function () {
     let entries = {
-      styles: "./assets/style/bundle.js",
+      styles: "./src/assets/style/bundle.js",
     };
-    glob.sync("./assets/js/*.js").forEach((file) => {
+    glob.sync("./src/assets/js/*.js").forEach((file) => {
       entries[path.basename(file, ".js")] = file;
     });
     return entries;
