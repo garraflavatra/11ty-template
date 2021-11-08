@@ -1,6 +1,6 @@
 const Image = require("@11ty/eleventy-img");
 const assets = require("./out/_proc/assets-manifest.json");
-const fs = require('fs');
+const fs = require("fs");
 
 // usage: {% image './src/images/cat.jpg', 'photo of my cat' %}
 async function imageShortcode(src, alt = undefined, sizes = "100vw") {
