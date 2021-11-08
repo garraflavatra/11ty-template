@@ -2,6 +2,7 @@ const glob = require("glob");
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const WebpackAssetsManifest = require("webpack-assets-manifest");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
   entry: function () {
@@ -15,7 +16,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "[name].[contenthash].css",
+      filename: "css/[name].[contenthash].css",
       chunkFilename: "[name].[contenthash].css",
     }),
     new WebpackAssetsManifest({}),
@@ -23,6 +24,22 @@ module.exports = {
   output: {
     filename: "[name].[contenthash].js",
     path: __dirname + "/out/_proc",
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [
+      `...`,
+      new CssMinimizerPlugin({
+        minimizerOptions: {
+          preset: [
+            "default",
+            {
+              discardComments: { removeAll: true },
+            },
+          ],
+        },
+      }),
+    ],
   },
   module: {
     rules: [
@@ -39,6 +56,13 @@ module.exports = {
           "css-loader",
           "sass-loader",
         ],
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[contenthash][ext]',
+        },
       },
     ],
   },

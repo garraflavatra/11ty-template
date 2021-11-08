@@ -1,6 +1,7 @@
 const Image = require("@11ty/eleventy-img");
 const assets = require("./out/_proc/assets-manifest.json");
 const fs = require("fs");
+const htmlmin = require("html-minifier");
 
 // usage: {% image './src/images/cat.jpg', 'photo of my cat' %}
 async function imageShortcode(src, alt = undefined, sizes = "100vw") {
@@ -44,7 +45,6 @@ async function assetPathShortcode(name) {
 
 async function inlineAssetShortcode(name) {
   const output = fs.readFileSync(`./out/_proc/${assets[name]}`).toString();
-  console.log(output);
   return output;
 }
 
@@ -66,6 +66,20 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addLiquidShortcode("inlineasset", inlineAssetShortcode);
   eleventyConfig.addHandlebarsShortcode("inlineasset", inlineAssetShortcode);
   eleventyConfig.addJavaScriptFunction("inlineasset", inlineAssetShortcode);
+
+  eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
+    // Eleventy 1.0+: use this.inputPath and this.outputPath instead
+    if( outputPath && outputPath.endsWith(".html") ) {
+      let minified = htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true
+      });
+      return minified;
+    }
+
+    return content;
+  });
 
   return {
     dir: {
