@@ -67,13 +67,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addHandlebarsShortcode("inlineasset", inlineAssetShortcode);
   eleventyConfig.addJavaScriptFunction("inlineasset", inlineAssetShortcode);
 
-  eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
-    // Eleventy 1.0+: use this.inputPath and this.outputPath instead
-    if( outputPath && outputPath.endsWith(".html") ) {
+  eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
+    if (outputPath && outputPath.endsWith(".html")) {
       let minified = htmlmin.minify(content, {
         useShortDoctype: true,
         removeComments: true,
-        collapseWhitespace: true
+        collapseWhitespace: true,
       });
       return minified;
     }

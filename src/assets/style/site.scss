@@ -1,24 +1,26 @@
 @font-face {
-  font-family: 'Indie Flower';
+  font-family: "Indie Flower";
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/indie-flower-v12-latin-regular.eot');
-  src: local(''),
-       url('../fonts/indie-flower-v12-latin-regular.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/indie-flower-v12-latin-regular.woff2') format('woff2'),
-       url('../fonts/indie-flower-v12-latin-regular.woff') format('woff'),
-       url('../fonts/indie-flower-v12-latin-regular.ttf') format('truetype'),
-       url('../fonts/indie-flower-v12-latin-regular.svg#IndieFlower') format('svg');
+  src: url("../fonts/indie-flower-v12-latin-regular.eot");
+  src: local(""),
+    url("../fonts/indie-flower-v12-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/indie-flower-v12-latin-regular.woff2") format("woff2"),
+    url("../fonts/indie-flower-v12-latin-regular.woff") format("woff"),
+    url("../fonts/indie-flower-v12-latin-regular.ttf") format("truetype"),
+    url("../fonts/indie-flower-v12-latin-regular.svg#IndieFlower") format("svg");
 }
 
 $purple: #663399;
 
 .style {
   color: $purple;
-  font-family: 'Indie Flower', display;
+  font-family: "Indie Flower", display;
 }
 
-pre, pre code {
+pre,
+pre code {
   background-color: #e6e6e6;
   padding: 5px;
   max-width: 100%;
