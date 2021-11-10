@@ -11,6 +11,14 @@ title: Demo
 
 {% image 'https://images.unsplash.com/photo-1514722576538-e8501559835e', 'Chameleon' %}
 
+## CSS background image
+
+```html
+<p class="bg"></p>
+```
+
+<p class="bg"></p>
+
 ## Styles
 
 ```html

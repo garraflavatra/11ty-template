@@ -1,5 +1,4 @@
 {
-  "main": "index.js",
   "scripts": {
     "start": "run-s clean webpack:build-dev && run-p webpack:watch eleventy:watch",
     "build": "run-s clean webpack:build eleventy:build",
@@ -15,6 +14,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0-canary.44",
     "@11ty/eleventy-img": "^1.0.0",
+    "11ty-tools": "^1.0.0-alpha.1",
     "babel-loader": "^8.2.3",
     "css-loader": "^6.5.1",
     "css-minimizer-webpack-plugin": "^3.1.2",
