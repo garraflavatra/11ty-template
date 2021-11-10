@@ -1,0 +1,9 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Demo</title><link rel="stylesheet" href="_proc/css/styles.2909617b7632d78f591e.css"></head><body><h2>Image</h2><pre><code class="language-njk">{% image 'https://images.unsplash.com/photo-1514722576538-e8501559835e', 'Chameleon' %}
+</code></pre><picture><source type="image/webp" srcset="_proc/img/CKS8rfmgyM-300.webp 300w, _proc/img/CKS8rfmgyM-600.webp 600w" sizes="100vw"><source type="image/jpeg" srcset="_proc/img/CKS8rfmgyM-300.jpeg 300w, _proc/img/CKS8rfmgyM-600.jpeg 600w" sizes="100vw"><img src="_proc/img/CKS8rfmgyM-300.jpeg" width="600" height="397" alt="Chameleon" loading="lazy" decoding="async"></picture><h2>CSS background image</h2><pre><code class="language-html">&lt;p class=&quot;bg&quot;&gt;&lt;/p&gt;
+</code></pre><p class="bg"></p><h2>Styles</h2><pre><code class="language-html">&lt;p class=&quot;style&quot;&gt;These are some demo styles written in SCSS.&lt;/p&gt;
+</code></pre><p class="style">These are some demo styles written in SCSS.</p><h2>Hashed asset paths</h2><p>Get an asset path:</p><pre><code class="language-njk">{% asset 'demo.js' %}
+</code></pre><pre><code>_proc/demo.260a3407fb52e73b888e.js
+</code></pre><h2>Inline assets</h2><p>Asset contents can be inlined for better performance:</p><pre><code class="language-njk">{% inlineasset 'test.js' %}
+</code></pre><pre><code>/*! For license information please see test.0ad618b6ad65f065820e.js.LICENSE.txt */
+(()=&gt;{var __webpack_modules__={&quot;./src/assets/js/test.js&quot;:()=&gt;{eval('console.log(&quot;test&quot;);\n\n//# sourceURL=webpack:///./src/assets/js/test.js?')}},__webpack_exports__={};__webpack_modules__[&quot;./src/assets/js/test.js&quot;]()})();
+</code></pre></body></html>

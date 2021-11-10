@@ -1,0 +1,2 @@
+/*! For license information please see demo.260a3407fb52e73b888e.js.LICENSE.txt */
+(()=>{var __webpack_modules__={"./src/assets/js/demo.js":()=>{eval('console.log("demo");\n\n//# sourceURL=webpack:///./src/assets/js/demo.js?')}},__webpack_exports__={};__webpack_modules__["./src/assets/js/demo.js"]()})();
