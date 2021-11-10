@@ -1,6 +1,6 @@
 const tools = require("11ty-tools");
 
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(tools);
 
   return {
