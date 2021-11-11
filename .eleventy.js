@@ -2,6 +2,8 @@ const tools = require("11ty-tools");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(tools);
+  eleventyConfig.addPassthroughCopy({ static: "/" });
+  eleventyConfig.addWatchTarget("./assets");
 
   return {
     dir: {
