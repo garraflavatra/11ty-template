@@ -1,3 +1,10 @@
 [build]
   command = "npm run build"
   publish = "out"
+
+[[plugins]]
+  package = "netlify-plugin-11ty"
+  [plugins.inputs]
+    cache_img = './_proc/img'
+    cache_img_httpHeader = true
+    cache_assets = '../.cache'
