@@ -12,7 +12,7 @@
     "format": "prettier --write . --ignore-path .gitignore --plugin-search-dir=. ."
   },
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.0-canary.44",
+    "@11ty/eleventy": "^1.0.0-canary.46",
     "@11ty/eleventy-img": "^1.0.0",
     "11ty-tools": "^2.0.0",
     "babel-loader": "^8.2.3",
