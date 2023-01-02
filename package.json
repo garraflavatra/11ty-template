@@ -15,7 +15,7 @@
     "@11ty/eleventy": "^1.0.0-canary.48",
     "@11ty/eleventy-img": "^1.0.0",
     "11ty-tools": "^2.0.0",
-    "babel-loader": "^8.2.3",
+    "babel-loader": "^8.3.0",
     "css-loader": "^6.5.1",
     "css-minimizer-webpack-plugin": "^3.3.0",
     "glob": "^7.2.0",
